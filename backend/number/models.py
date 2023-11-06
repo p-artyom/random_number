@@ -16,3 +16,9 @@ class Number(TimestampedModel):
     class Meta:
         verbose_name = 'число'
         verbose_name_plural = 'числа'
+
+
+class NumberMoreNine(TimestampedModel):
+    class Meta:
+        verbose_name = 'число больше 9'
+        verbose_name_plural = 'числа больше 9'
