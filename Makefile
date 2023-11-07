@@ -17,3 +17,6 @@ makemig:
 
 mig:
 	$(MANAGE) migrate
+
+test:
+	$(MANAGE) test
