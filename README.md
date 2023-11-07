@@ -168,9 +168,11 @@ INSERT INTO pgagent.pga_schedule(
     jscstart, jscend,    jscminutes, jschours, jscweekdays, jscmonthdays, jscmonths
 ) VALUES (
     jid, 'schedule1'::text, ''::text, true,
-    '2023-11-07 00:00:00 +08:00'::timestamp with time zone, '2024-11-07 00:00:00 080'::timestamp with time zone,
+    '2023-11-07 00:00:00 +08:00'::timestamp with time zone,
+    '2024-11-07 00:00:00 080'::timestamp with time zone,
     -- Minutes
-    '{t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t}'::bool[]::boolean[],
+    '{t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,
+    t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t}'::bool[]::boolean[],
     -- Hours
     '{t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t}'::bool[]::boolean[],
     -- Week days

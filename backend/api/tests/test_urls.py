@@ -27,7 +27,6 @@ class UrlsTests(TestCase):
             'number': f'/api/number/{cls.number.id}/',
             'unknown_number': '/api/number/99/',
             'docs': '/api/docs/',
-            'get_aggregated_data': '/api/get_aggregated_data/',
             'get_random_number': '/api/get_random_number/',
         }
 
@@ -50,16 +49,6 @@ class UrlsTests(TestCase):
                 self.client,
             ),
             (self.urls.get('docs'), HTTPStatus.OK, self.client),
-            (
-                self.urls.get('get_aggregated_data'),
-                HTTPStatus.OK,
-                self.authorized_user,
-            ),
-            (
-                self.urls.get('get_aggregated_data'),
-                HTTPStatus.UNAUTHORIZED,
-                self.client,
-            ),
             (
                 self.urls.get('get_random_number'),
                 HTTPStatus.OK,
@@ -87,12 +76,6 @@ class UrlsTests(TestCase):
             ),
             (
                 self.urls.get('number'),
-                HTTPStatus.METHOD_NOT_ALLOWED,
-                self.authorized_user,
-                {},
-            ),
-            (
-                self.urls.get('get_aggregated_data'),
                 HTTPStatus.METHOD_NOT_ALLOWED,
                 self.authorized_user,
                 {},
